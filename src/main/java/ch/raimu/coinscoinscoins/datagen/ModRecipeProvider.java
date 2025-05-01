@@ -138,8 +138,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(recipeOutput, IRON_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_GOLD.get(), 0.25f, 100, "coin_gold");
         oreSmelting(recipeOutput, GOLD_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_DIAMOND.get(), 0.25f, 200, "coin_diamond");
         oreBlasting(recipeOutput, GOLD_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_DIAMOND.get(), 0.25f, 100, "coin_diamond");
-        oreSmelting(recipeOutput, DIAMOND_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.25f, 200, "coin_netherite");
-        oreBlasting(recipeOutput, DIAMOND_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.25f, 100, "coin_netherite");
+        oreSmelting(recipeOutput, DIAMOND_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 0.25f, 200, "coin_emerald");
+        oreBlasting(recipeOutput, DIAMOND_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 0.25f, 100, "coin_emerald");
+        oreSmelting(recipeOutput, EMERALD_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.25f, 200, "coin_netherite");
+        oreBlasting(recipeOutput, EMERALD_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.25f, 100, "coin_netherite");
         oreSmelting(recipeOutput, NETHERITE_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ANCIENT.get(), 0.25f, 200, "coin_ancient");
         oreBlasting(recipeOutput, NETHERITE_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ANCIENT.get(), 0.25f, 100, "coin_ancient");
     }
