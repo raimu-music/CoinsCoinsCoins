@@ -1,0 +1,21 @@
+{
+  "creativetab.coinscoinscoins.coins_tab": "Coins Coins Coins",
+
+  "item.coinscoinscoins.copper_nugget": "Copper Nugget",
+  "item.coinscoinscoins.diamond_nugget": "Diamond Nugget",
+  "item.coinscoinscoins.emerald_nugget": "Emerald Nugget",
+  "item.coinscoinscoins.netherite_nugget": "Netherite Nugget",
+  "item.coinscoinscoins.coin_copper": "Copper Coin",
+  "item.coinscoinscoins.coin_pile_copper": "Copper Coins Pile",
+  "item.coinscoinscoins.coin_iron": "Iron Coin",
+  "item.coinscoinscoins.coin_pile_iron": "Iron Coins Pile",
+  "item.coinscoinscoins.coin_gold": "Gold Coin",
+  "item.coinscoinscoins.coin_pile_gold": "Gold Coins Pile",
+  "item.coinscoinscoins.coin_diamond": "Diamond Coin",
+  "item.coinscoinscoins.coin_pile_diamond": "Diamond Coins Pile",
+  "item.coinscoinscoins.coin_emerald": "Emerald Coin",
+  "item.coinscoinscoins.coin_pile_emerald": "Emerald Coins Pile",
+  "item.coinscoinscoins.coin_netherite": "Netherite Coin",
+  "item.coinscoinscoins.coin_pile_netherite": "Netherite Coins Pile",
+  "item.coinscoinscoins.coin_ancient": "Ancient Coin"
+}
