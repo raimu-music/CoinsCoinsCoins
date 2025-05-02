@@ -6,16 +6,21 @@
   "item.coinscoinscoins.emerald_nugget": "Emerald Nugget",
   "item.coinscoinscoins.netherite_nugget": "Netherite Nugget",
   "item.coinscoinscoins.coin_copper": "Copper Coin",
-  "item.coinscoinscoins.coin_pile_copper": "Copper Coins Pile",
+  "item.coinscoinscoins.coin_pile_copper": "Copper Coin Pile",
   "item.coinscoinscoins.coin_iron": "Iron Coin",
-  "item.coinscoinscoins.coin_pile_iron": "Iron Coins Pile",
+  "item.coinscoinscoins.coin_pile_iron": "Iron Coin Pile",
   "item.coinscoinscoins.coin_gold": "Gold Coin",
-  "item.coinscoinscoins.coin_pile_gold": "Gold Coins Pile",
+  "item.coinscoinscoins.coin_pile_gold": "Gold Coin Pile",
   "item.coinscoinscoins.coin_diamond": "Diamond Coin",
-  "item.coinscoinscoins.coin_pile_diamond": "Diamond Coins Pile",
+  "item.coinscoinscoins.coin_pile_diamond": "Diamond Coin Pile",
   "item.coinscoinscoins.coin_emerald": "Emerald Coin",
-  "item.coinscoinscoins.coin_pile_emerald": "Emerald Coins Pile",
+  "item.coinscoinscoins.coin_pile_emerald": "Emerald Coin Pile",
   "item.coinscoinscoins.coin_netherite": "Netherite Coin",
-  "item.coinscoinscoins.coin_pile_netherite": "Netherite Coins Pile",
-  "item.coinscoinscoins.coin_ancient": "Ancient Coin"
+  "item.coinscoinscoins.coin_pile_netherite": "Netherite Coin Pile",
+  "item.coinscoinscoins.coin_ancient": "Ancient Coin",
+
+  "item.coinscoinscoins.netherite_coin_core": "Netherite Coin Core",
+
+  "info.coinscoinscoins.coin_netherite": "Since Netherite doesn't burn, the only way to obtain coins from its nuggets is through compacting.\n\nDrop a Netherite Nugget into the world, and make an Anvil block fall on it to compact it to a Netherite Coin.\n\nWorks on multiple items as well!",
+  "info.coinscoinscoins.coin_ancient": "Since Netherite doesn't burn, the only way to progress to the next tier is through compacting.\n\nDrop a Netherite Coin Pile into the world, and make an Anvil block fall on it to compact it to an Ancient Coin.\n\nWorks on multiple items as well!"
 }

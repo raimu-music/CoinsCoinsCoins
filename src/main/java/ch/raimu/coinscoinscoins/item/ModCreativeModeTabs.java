@@ -40,6 +40,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.COIN_NETHERITE);
                         output.accept(ModItems.COIN_PILE_NETHERITE);
                         output.accept(ModItems.COIN_ANCIENT);
+                        //output.accept(ModItems.NETHERITE_COIN_CORE);
 
                     }).build());
 

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "ch.raimu.coinscoinscoins.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AnvilBlockMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

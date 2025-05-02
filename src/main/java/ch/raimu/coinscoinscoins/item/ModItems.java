@@ -1,13 +1,18 @@
 package ch.raimu.coinscoinscoins.item;
 
 import ch.raimu.coinscoinscoins.CoinsCoinsCoins;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.SwordItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CoinsCoinsCoins.MOD_ID);
@@ -36,8 +41,7 @@ public class ModItems {
     public static final DeferredItem<Item> COIN_PILE_EMERALD = ITEMS.registerSimpleItem("coin_pile_emerald");
     public static final DeferredItem<Item> COIN_PILE_NETHERITE = ITEMS.registerSimpleItem("coin_pile_netherite");
 
-
-
+    //public static final DeferredItem<Item> NETHERITE_COIN_CORE = ITEMS.registerSimpleItem("netherite_coin_core");
 
 
     public static void register(IEventBus eventBus) {

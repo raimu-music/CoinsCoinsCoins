@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 
@@ -33,8 +34,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.DIAMOND_NUGGET);
         List<ItemLike> EMERALD_SMELTABLES = List.of(
                 ModItems.EMERALD_NUGGET);
-        List<ItemLike> NETHERITE_SMELTABLES = List.of(
-                ModItems.NETHERITE_NUGGET);
 
         List<ItemLike> COPPER_PILES_SMELTABLES = List.of(
                 ModItems.COIN_PILE_COPPER);
@@ -46,8 +45,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 ModItems.COIN_PILE_DIAMOND);
         List<ItemLike> EMERALD_PILES_SMELTABLES = List.of(
                 ModItems.COIN_PILE_EMERALD);
-        List<ItemLike> NETHERITE_PILES_SMELTABLES = List.of(
-                ModItems.COIN_PILE_NETHERITE);
 
         //RECIPE DEFINITION SECTION
         //ADDITIONAL NUGGETS
@@ -74,6 +71,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', ModItems.COIN_COPPER.get())
                 .unlockedBy("has_coin_copper", has(ModItems.COIN_COPPER)).save(recipeOutput);
+        //COPPER COIN FROM PILE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_COPPER.get(), 9)
+                .requires(ModItems.COIN_PILE_COPPER)
+                .unlockedBy("has_coin_pile_copper", has(ModItems.COIN_PILE_COPPER)).save(recipeOutput);
+        //COPPER COIN FROM IRON COIN
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_COPPER.get(), 9)
+                .requires(ModItems.COIN_IRON)
+                .unlockedBy("has_coin_iron", has(ModItems.COIN_IRON)).save(recipeOutput, "coinscoinscoins:coin_copper_from_coin_iron");
 
         //IRON COIN PILE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COIN_PILE_IRON.get())
@@ -82,6 +87,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', ModItems.COIN_IRON.get())
                 .unlockedBy("has_coin_iron", has(ModItems.COIN_IRON)).save(recipeOutput);
+        //IRON COIN FROM PILE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_IRON.get(), 9)
+                .requires(ModItems.COIN_PILE_IRON)
+                .unlockedBy("has_coin_pile_iron", has(ModItems.COIN_PILE_IRON)).save(recipeOutput);
+        //IRON COIN FROM GOLD COIN
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_IRON.get(), 9)
+                .requires(ModItems.COIN_GOLD)
+                .unlockedBy("has_coin_gold", has(ModItems.COIN_GOLD)).save(recipeOutput, "coinscoinscoins:coin_iron_from_coin_gold");
 
         //GOLD COIN PILE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COIN_PILE_GOLD.get())
@@ -90,6 +103,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', ModItems.COIN_GOLD.get())
                 .unlockedBy("has_coin_gold", has(ModItems.COIN_GOLD)).save(recipeOutput);
+        //GOLD COIN FROM PILE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_GOLD.get(), 9)
+                .requires(ModItems.COIN_PILE_GOLD)
+                .unlockedBy("has_coin_pile_gold", has(ModItems.COIN_PILE_GOLD)).save(recipeOutput);
+        //GOLD COIN FROM DIAMOND COIN
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_GOLD.get(), 9)
+                .requires(ModItems.COIN_DIAMOND)
+                .unlockedBy("has_coin_diamond", has(ModItems.COIN_DIAMOND)).save(recipeOutput, "coinscoinscoins:coin_gold_from_coin_diamond");
 
         //DIAMOND COIN PILE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COIN_PILE_DIAMOND.get())
@@ -98,6 +119,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', ModItems.COIN_DIAMOND.get())
                 .unlockedBy("has_coin_diamond", has(ModItems.COIN_DIAMOND)).save(recipeOutput);
+        //DIAMOND COIN FROM PILE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_DIAMOND.get(), 9)
+                .requires(ModItems.COIN_PILE_DIAMOND)
+                .unlockedBy("has_coin_pile_diamond", has(ModItems.COIN_PILE_DIAMOND)).save(recipeOutput);
+        //DIAMOND COIN FROM EMERALD COIN
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_DIAMOND.get(), 9)
+                .requires(ModItems.COIN_EMERALD)
+                .unlockedBy("has_coin_emerald", has(ModItems.COIN_EMERALD)).save(recipeOutput, "coinscoinscoins:coin_diamond_from_coin_emerald");
+
 
         //EMERALD COIN PILE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COIN_PILE_EMERALD.get())
@@ -106,6 +136,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', ModItems.COIN_EMERALD.get())
                 .unlockedBy("has_coin_emerald", has(ModItems.COIN_EMERALD)).save(recipeOutput);
+        //EMERALD COIN FROM PILE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 9)
+                .requires(ModItems.COIN_PILE_EMERALD)
+                .unlockedBy("has_coin_pile_emerald", has(ModItems.COIN_PILE_EMERALD)).save(recipeOutput);
+        //EMERALD COIN FROM NETHERITE COIN
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 9)
+                .requires(ModItems.COIN_NETHERITE)
+                .unlockedBy("has_coin_netherite", has(ModItems.COIN_NETHERITE)).save(recipeOutput, "coinscoinscoins:coin_emerald_from_coin_netherite");
+
 
         //NETHERITE COIN PILE
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.COIN_PILE_NETHERITE.get())
@@ -114,6 +153,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CCC")
                 .define('C', ModItems.COIN_NETHERITE.get())
                 .unlockedBy("has_coin_netherite", has(ModItems.COIN_NETHERITE)).save(recipeOutput);
+        //NETHERITE COIN FROM PILE
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 9)
+                .requires(ModItems.COIN_PILE_NETHERITE)
+                .unlockedBy("has_coin_pile_netherite", has(ModItems.COIN_PILE_NETHERITE)).save(recipeOutput);
+        //NETHERITE COIN FROM ANCIENT COIN
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 9)
+                .requires(ModItems.COIN_ANCIENT)
+                .unlockedBy("has_coin_ancient", has(ModItems.COIN_ANCIENT)).save(recipeOutput, "coinscoinscoins:coin_netherite_from_coin_ancient");
+
 
         //SMELTING SECTION
 
@@ -128,8 +176,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(recipeOutput, DIAMOND_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_DIAMOND.get(), 0.05f, 50, "coin_diamond");
         oreSmelting(recipeOutput, EMERALD_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 0.05f, 100, "coin_emerald");
         oreBlasting(recipeOutput, EMERALD_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 0.05f, 50, "coin_emerald");
-        oreSmelting(recipeOutput, NETHERITE_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.05f, 100, "coin_netherite");
-        oreBlasting(recipeOutput, NETHERITE_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.05f, 50, "coin_netherite");
+        //oreSmelting(recipeOutput, NETHERITE_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.05f, 100, "coin_netherite");
+        //oreBlasting(recipeOutput, NETHERITE_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.05f, 50, "coin_netherite");
 
         // PILES UPGRADES
         oreSmelting(recipeOutput, COPPER_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_IRON.get(), 0.25f, 200, "coin_iron");
@@ -142,8 +190,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(recipeOutput, DIAMOND_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_EMERALD.get(), 0.25f, 100, "coin_emerald");
         oreSmelting(recipeOutput, EMERALD_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.25f, 200, "coin_netherite");
         oreBlasting(recipeOutput, EMERALD_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_NETHERITE.get(), 0.25f, 100, "coin_netherite");
-        oreSmelting(recipeOutput, NETHERITE_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ANCIENT.get(), 0.25f, 200, "coin_ancient");
-        oreBlasting(recipeOutput, NETHERITE_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ANCIENT.get(), 0.25f, 100, "coin_ancient");
+        //oreSmelting(recipeOutput, NETHERITE_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ANCIENT.get(), 0.25f, 200, "coin_ancient");
+        //oreBlasting(recipeOutput, NETHERITE_PILES_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ANCIENT.get(), 0.25f, 100, "coin_ancient");
+
+        //NOTE: THE EMERALD UPGRADE IS MANUALLY DONE IN DATA
     }
 
 

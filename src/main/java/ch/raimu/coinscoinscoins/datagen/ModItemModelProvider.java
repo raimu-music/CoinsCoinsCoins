@@ -33,6 +33,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.COIN_PILE_EMERALD.get());
         basicItem(ModItems.COIN_PILE_NETHERITE.get());
 
+        //basicItem(ModItems.NETHERITE_COIN_CORE.get());
+
 
 
     }
